@@ -1,0 +1,41 @@
+One of the biggest challenges in building a deep learning model is choosing the right hyper-parameters. If the hyper-parameters aren’t ideal, the network may not be able to produce optimal results or development could be far more challenging. Perhaps the most difficult parameter to determine is the optimal learning rate.Many experts consider the learning rate the most important hyper-parameter for training a neural network. This optimizer controls how much network weights adjust in response to the loss gradient, with a larger number representing more dramatic adjustments.
+
+Why Learning Rate Matters?
+
+If your learning rate isn’t optimal, it will likely fail to deliver any value. With a learning rate that’s too large, your model may frequently over-correct, leading to an unstable training process that misses the optimum weights. Considering how unreliable data is one of the most common challenges in AI, sub-optimal weights could cause substantial problems in real-world applications.
+
+The solution, then, would seem to be using smaller corrections, but this has disadvantages, too. If your neural network makes corrections that are too small, training could stagnate. It could take far more time than you can afford to find the optimal weights. This would hinder real-world use cases that require a quick return on investment to justify machine learning costs.
+
+How to Choose the Right Learning Rate for Your Model?
+
+Unfortunately, it’s almost impossible to tell what the optimal learning rate for your model will be before you get started. In many cases, amateur data scientists start with a random number that seems reasonable. If you have some experience with neural networks, you may leverage that and use what worked for you in past situations.
+
+While the latter of these scenarios is better than the former, both won’t reliably produce ideal figures. The answer is to adjust your learning rate throughout the training process. Here’s how you can find the optimal starting point and tailor your rate efficiently.
+
+Test Learning Rates on a Small Sample First
+
+Since it will take time to find the optimal  learning rate, it can be tempting to begin the search by testing the entire dataset. However, this will prove ineffective and take more time instead of streamlining the process.
+
+Some rates will cause your loss to diverge, and some will take far too long to produce results. If you test your entire dataset at once, the impact of these missteps will be far more significant. By contrast, if you start with a small sample, you can find and eliminate these non-ideal rates faster.
+
+Run tests with several learning rates on a small but representative sample of your data. You don’t need to single out the optimal rate in this step but aim to eliminate extremes on either end of the spectrum.
+
+Start With a Low Rate
+
+At first, it may seem like you should start with the maximum, making the biggest corrections first before fine-tuning it. However, in many instances, loss functions ultimately converge to a lower loss after temporarily deviating to higher losses, so only decreasing your rate isn’t always ideal.
+
+Steadily decreasing the learning rate often results in a plateau where training loss becomes harder to improve. Instead, start towards the lower end of your range. Record your test accuracy as you increase the learning rate over several epochs. You should notice a point where the loss improves and one where it either plateaus or varies widely.
+
+The point where improvements start to falter is a good starting point for your learning rate during training. The other point, where improvements begin, is the minimum that you can decrease to if necessary.
+
+Once you have this range, you can begin training your neural network. Keep in mind, though, that you should adjust it throughout training, too. Monitor how your loss gradient moves to see if you need to increase or decrease your learning rate as you work with your entire dataset.
+
+Consider Differential Learning Rates
+
+Depending on the complexity of your neural network, you may want to consider different learning rates. The different layers of your network may respond differently to various learning rates, so if you have hundreds of layers, fine-tuning them simultaneously may produce uneven results.
+
+Using a different learning rate for various groups of layers helps mitigate this problem. However, you should keep in mind that this only works if you don’t need much parallelism in your neural network, as it requires sequential passes.
+
+Optimal Learning Rates Improve Neural Network Performance
+
+Choosing the optimal learning rate is crucial to producing an effective neural network within time and budget constraints. If you follow these steps and know what to look out for, you can find the ideal rate before long every time. You can then ensure you produce the most accurate neutral network possible.
